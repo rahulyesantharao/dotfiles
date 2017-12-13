@@ -100,7 +100,3 @@ if has("autocmd")
   autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.cpp :call CleanExtraSpaces()
 endif
 
-" Add C++ basic header include statements from ~/HalimCP3/template.cpp
-if has("autocmd")
-  autocmd BufNewFile *.cpp r ~/HalimCP3/template.cpp
-endif
