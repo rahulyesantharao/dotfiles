@@ -1,0 +1,3 @@
+[submodule ".vim/themes/tomorrow-theme"]
+	path = .vim/themes/tomorrow-theme
+	url = https://github.com/chriskempson/tomorrow-theme.git
