@@ -61,11 +61,14 @@ set foldcolumn=1
 """"""""""""""""""""""""
 " Colors and Fonts
 """"""""""""""""""""""""
+" Enable file type detection
+filetype on
 " Enable syntax highlighting
 if !exists("g:syntax_on")
   syntax enable
 endif
-
+" Enable a specific theme
+colorscheme Tomorrow-Night
 " Set encoding properly
 set encoding=utf-8
 set fenc=utf-8
