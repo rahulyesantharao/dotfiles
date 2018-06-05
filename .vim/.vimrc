@@ -11,12 +11,20 @@ let g:mapleader=","
 
 " Fast file saving
 nmap <leader>w :w!<cr>
+" Fast vimrc reloading
+nmap <leader>s :source ~/.vimrc<cr>
 
+" History
+set hidden
+set history=100
 """"""""""""""""""""""""
 " VIM User Interface
 """"""""""""""""""""""""
 " Turn on line numbers
 set number
+
+" Color a column to control line length
+set colorcolumn=100
 
 " Show currently-typed command
 set showcmd
@@ -77,6 +85,9 @@ set termencoding=utf-8
 """"""""""""""""""""""""
 " Text, tab, indents
 """"""""""""""""""""""""
+" Use correct indent file for filetype
+filetype indent on
+
 " Replace tabs with spaces
 set expandtab
 
