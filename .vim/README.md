@@ -5,4 +5,8 @@ cd
 ln -s dotfiles/.vim
 ln -s dotfiles/.vim/.vimrc
 ```
-TODO: Check whether colors/ symlinks behave correctly. If not, redo the symlink (the files in colors/ should be symlinks to the .vim files in themes/)
+Make sure
+```
+set -g default-terminal "screen-256color"
+```
+is set in `.tmux.conf` if you want to use `tmux`.
