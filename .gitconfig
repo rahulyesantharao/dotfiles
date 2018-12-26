@@ -1,3 +1,5 @@
 [user]
-	email = rahul.yesantharao@gmail.com
-	name = Rahul Yesantharao
+  useConfigOnly = true
+
+[include]
+  path = ~/.gitconfig_local
