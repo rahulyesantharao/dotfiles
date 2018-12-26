@@ -7,3 +7,6 @@
 [submodule "vim/pack/plugins/opt/onedark.vim"]
 	path = vim/pack/plugins/opt/onedark.vim
 	url = git@github.com:joshdick/onedark.vim.git
+[submodule "vim/pack/plugins/start/nerdtree"]
+	path = vim/pack/plugins/start/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
