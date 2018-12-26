@@ -1,3 +1,4 @@
+set nocompatible " not vi compatible
 
 """"""""""""""""""""""""
 " General
@@ -17,11 +18,17 @@ nmap <leader>s :source ~/.vimrc<cr>
 " History
 set hidden
 set history=100
+
 """"""""""""""""""""""""
 " VIM User Interface
 """"""""""""""""""""""""
 " Turn on line numbers
-set number
+set number relativenumber
+" toggle relative numbering
+nnoremap <C-n> :set rnu!<CR> 
+
+set scrolloff=5 " keep cursor roughly centered
+set mouse+=a " allow mouse usage
 
 " Color a column to control line length
 set colorcolumn=100
@@ -59,6 +66,10 @@ nnoremap <leader><CR> :noh<CR>
 " Incremental searches
 set incsearch
 
+" will only be case sensitive if capital letter is used
+set ignorecase
+set smartcase
+
 " Show matching brackets
 set showmatch
 set mat=2 " blink for 2/10 of a second when matching brackets
@@ -75,11 +86,18 @@ set noshowmode
 " Colors and Fonts
 """"""""""""""""""""""""
 " Enable file type detection
-filetype on
+filetype plugin indent on
 " Enable syntax highlighting
 if !exists("g:syntax_on")
   syntax enable
 endif
+" highlight current line, only in active window
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
 " Enable a specific theme
 colorscheme Tomorrow-Night
 " Set encoding properly
@@ -90,9 +108,6 @@ set termencoding=utf-8
 """"""""""""""""""""""""
 " Text, tab, indents
 """"""""""""""""""""""""
-" Use correct indent file for filetype
-filetype indent on
-
 " Replace tabs with spaces
 set expandtab
 
@@ -119,3 +134,13 @@ if has("autocmd")
   autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.cpp :call CleanExtraSpaces()
 endif
 
+" save read-only files
+cmap w!! w !sudo tee > /dev/null %
+
+" splits
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+set splitbelow
+set splitright
