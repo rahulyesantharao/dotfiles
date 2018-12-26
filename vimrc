@@ -99,10 +99,10 @@ augroup CursorLine
 augroup END
 
 " Enable a specific colorscheme (editor and statusline) 
-packadd! palenight.vim
-set background=dark
-colorscheme palenight " Tomorrow-Night
-let g:lightline = {'colorscheme': 'palenight'}
+packadd! onedark.vim
+"set background=dark
+colorscheme onedark
+let g:lightline = {'colorscheme': 'onedark'}
 
 " Set encoding properly
 set encoding=utf-8

@@ -4,3 +4,6 @@
 [submodule "vim/pack/plugins/opt/palenight.vim"]
 	path = vim/pack/plugins/opt/palenight.vim
 	url = git@github.com:drewtempelmeyer/palenight.vim.git
+[submodule "vim/pack/plugins/opt/onedark.vim"]
+	path = vim/pack/plugins/opt/onedark.vim
+	url = git@github.com:joshdick/onedark.vim.git
