@@ -4,10 +4,10 @@ dotfilesdir=`pwd`
 
 link() { # filename
 	cd
-	ln -sfn "$dotfilesdir/$1"
+	ln -sfn "$dotfilesdir/$1" ".$1"
 }
 
-link ".vimrc"
-link ".vim"
-link ".gitconfig"
-link ".gitconfig_local"
+link "vimrc"
+link "vim"
+link "gitconfig"
+link "gitconfig_local"
