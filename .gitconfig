@@ -1,5 +1,31 @@
+[alias]
+  a = add
+  br = branch -vv
+  bra = branch -vv --all
+  c = commit -v
+  ca = commit --amend -v
+  d = diff
+  dh = diff HEAD~
+  s = status
+  
+[core]
+  editor = vim
+
+[diff]
+  mnemonicPrefix = true         # makes diff folder prefix meaningful
+  compactionHeuristic = true    # changes diff output to be nicer
+
+[color]
+  ui = auto                     # colorizes output when supported
+
+[pull]
+  ff = only                     # only allow pull if it can be fast forwarded
+
+[push]
+  default = simple              # only push current branch; check that name matches
+
 [user]
-  useConfigOnly = true
+  useConfigOnly = true          # does not infer user settings if not specified
 
 [include]
-  path = ~/.gitconfig_local
+  path = ~/.gitconfig_local     # add local gitconfig
