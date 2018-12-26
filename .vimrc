@@ -49,7 +49,7 @@ endif
 set ruler
 
 " Height of command bar
-set cmdheight=2
+" set cmdheight=2
 
 " Highlight search
 set hlsearch
@@ -65,6 +65,11 @@ set mat=2 " blink for 2/10 of a second when matching brackets
 
 " Add a margin to the left
 set foldcolumn=1
+
+" Make the statusline always visible
+set laststatus=2
+" Get rid of default insert notification (for lightline plugin)
+set noshowmode
 
 """"""""""""""""""""""""
 " Colors and Fonts

@@ -3,7 +3,7 @@ In order to include this on a computer, do the following two commands in bash:
 ```
 cd
 ln -s dotfiles/.vim
-ln -s dotfiles/.vim/.vimrc
+ln -s dotfiles/.vimrc
 ```
 Make sure
 ```
