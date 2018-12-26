@@ -114,6 +114,7 @@ set expandtab
 " Set tab to display as 2 spaces
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
 
 " Indenting
 set autoindent " Copy current indent level over to next line
