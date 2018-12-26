@@ -149,3 +149,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 set splitbelow
 set splitright
+
+set hidden " allow buffers to be hidden without saving
+
+"""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""
+" nerdtree
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
