@@ -98,8 +98,12 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
-" Enable a specific theme
-colorscheme Tomorrow-Night
+" Enable a specific colorscheme (editor and statusline) 
+packadd! palenight.vim
+set background=dark
+colorscheme palenight " Tomorrow-Night
+let g:lightline = {'colorscheme': 'palenight'}
+
 " Set encoding properly
 set encoding=utf-8
 set fenc=utf-8

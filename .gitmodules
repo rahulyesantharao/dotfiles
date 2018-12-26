@@ -1,6 +1,6 @@
 [submodule "vim/themes/tomorrow-theme"]
 	path = vim/themes/tomorrow-theme
 	url = https://github.com/chriskempson/tomorrow-theme.git
-[submodule "vim/pack/plugins/start/lightline.vim"]
-	path = vim/pack/plugins/start/lightline.vim
-	url = git@github.com:itchyny/lightline.vim.git
+[submodule "vim/pack/plugins/opt/palenight.vim"]
+	path = vim/pack/plugins/opt/palenight.vim
+	url = git@github.com:drewtempelmeyer/palenight.vim.git
