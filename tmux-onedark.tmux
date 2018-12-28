@@ -1,4 +1,5 @@
 #!/bin/bash
+# taken from: https://github.com/odedlaz/tmux-onedark-theme
 onedark_black="#282c34"
 onedark_blue="#61afef"
 onedark_yellow="#e5c07b"
