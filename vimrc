@@ -28,7 +28,7 @@ set number relativenumber
 nnoremap <C-n> :set rnu!<CR> 
 
 set scrolloff=5 " keep cursor roughly centered
-set mouse+=a " allow mouse usage
+set mouse+=nv " allow mouse usage
 
 " Color a column to control line length
 set colorcolumn=100
@@ -99,10 +99,18 @@ augroup CursorLine
 augroup END
 
 " Enable a specific colorscheme (editor and statusline) 
+"enable truecolor
+if (has("termguicolors"))
+  set t_8f=[38;2;%lu;%lu;%lum
+  set t_8b=[48;2;%lu;%lu;%lum
+  set termguicolors
+endif
+
 packadd! onedark.vim
 "set background=dark
 colorscheme onedark
 let g:lightline = {'colorscheme': 'onedark'}
+
 
 " Set encoding properly
 set encoding=utf-8
