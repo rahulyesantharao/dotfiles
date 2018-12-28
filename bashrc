@@ -11,6 +11,9 @@ esac
 # Settings
 source ~/.bash/settings.bash
 
+# More Settings
+source ~/.shell/external.sh
+
 # Aliases
 source ~/.shell/aliases.sh
 

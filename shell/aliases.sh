@@ -46,6 +46,19 @@ up()
   cd "${cdir}"
 }
 
+# Use pip without requiring virtualenv
+syspip() {
+  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+syspip2() {
+  PIP_REQUIRE_VIRTUALENV="" pip2 "$@"
+}
+
+syspip3() {
+  PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+}
+
 # personal
 alias notes='vim ~/notes.txt'
 
@@ -54,5 +67,4 @@ alias notes='vim ~/notes.txt'
 #   sleep 10; alert
 # from default bashrc
 #alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 
