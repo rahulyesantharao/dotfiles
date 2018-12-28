@@ -7,11 +7,24 @@ link() { # filename
 	ln -sfn "$dotfilesdir/$1" ".$1"
 }
 
+# vim 
 link "vimrc"
 link "vim"
+
+# git
 link "gitconfig"
 link "gitconfig_local"
-link "inputrc"
+
+# tmux
 link "tmux.conf"
 link "tmux-onedark.tmux"
+
+# shell (bash specific stuff)
+link "inputrc"
+link "bashrc"
+link "bash_profile"
+link "shell"
+link "bash"
+
+# ssh
 link "ssh/config"
