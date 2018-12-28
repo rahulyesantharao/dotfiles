@@ -111,6 +111,8 @@ packadd! onedark.vim
 colorscheme onedark
 let g:lightline = {'colorscheme': 'onedark'}
 
+"get rid of weird background color behavior (https://sunaku.github.io/vim-256color-bce.html)
+set t_ut=
 
 " Set encoding properly
 set encoding=utf-8
