@@ -22,6 +22,9 @@ set history=100
 """"""""""""""""""""""""
 " VIM User Interface
 """"""""""""""""""""""""
+" intuitive line movement
+nnoremap j gj
+nnoremap k gk
 " Turn on line numbers
 set number relativenumber
 " toggle relative numbering
