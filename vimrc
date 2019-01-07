@@ -26,7 +26,7 @@ set history=100
 nnoremap j gj
 nnoremap k gk
 " Turn on line numbers
-set number relativenumber
+set number 
 " toggle relative numbering
 nnoremap <C-n> :set rnu!<CR> 
 
