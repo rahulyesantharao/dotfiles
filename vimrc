@@ -1,6 +1,12 @@
 set nocompatible " not vi compatible
 
 """"""""""""""""""""""""
+" Pathogen (for VIm <8)
+""""""""""""""""""""""""
+" execute pathogen#infect()
+" execute pathogen#infect('~/.vim/pack/{}/opt/onedark.vim')
+
+""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""
 " Update file if it is changed outside of Vim
