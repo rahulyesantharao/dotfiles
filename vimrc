@@ -163,7 +163,19 @@ nnoremap <C-l> <C-w>l
 set splitbelow
 set splitright
 
+" ease of use
+nnoremap <CR> :w<CR>
+nnoremap <space> :
+
 set hidden " allow buffers to be hidden without saving
+
+" save folds on close
+" https://vim.fandom.com/wiki/Make_views_automatic
+augroup AutoSaveFolds
+  autocmd!
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent! loadview
+augroup END
 
 """""""""""""""""""""""
 " Plugins
