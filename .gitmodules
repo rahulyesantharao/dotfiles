@@ -16,3 +16,6 @@
 [submodule "vim/pack/plugins/start/black"]
 	path = vim/pack/plugins/start/black
 	url = git@github.com:psf/black.git
+[submodule "vim/pack/plugins/start/nerdcommenter"]
+	path = vim/pack/plugins/start/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git

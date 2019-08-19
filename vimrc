@@ -192,3 +192,6 @@ augroup END
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
+" nerdcommenter
+nnoremap <C-_> :call NERDComment(0, "toggle")<CR>
+vnoremap <C-_> :call NERDComment(0, "toggle")<CR>
