@@ -13,3 +13,6 @@
 [submodule "vim/pack/plugins/start/vim-buffergator"]
 	path = vim/pack/plugins/start/vim-buffergator
 	url = git@github.com:jeetsukumaran/vim-buffergator.git
+[submodule "vim/pack/plugins/start/black"]
+	path = vim/pack/plugins/start/black
+	url = git@github.com:psf/black.git
