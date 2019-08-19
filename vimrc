@@ -156,6 +156,7 @@ endfun
 
 if has("autocmd")
   autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.cpp :call CleanExtraSpaces()
+  autocmd BufWritePre *.py silent :Black
 endif
 
 " save read-only files
