@@ -172,6 +172,7 @@ set splitright
 " ease of use
 nnoremap <CR> :w<CR>
 nnoremap <space> :
+nnoremap Q @q
 
 set hidden " allow buffers to be hidden without saving
 
