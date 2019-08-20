@@ -12,3 +12,4 @@ If you clone without submodules, run `cd dotfiles && git submodule update --init
    - Switch `PL_SYMBOLS` in [`prompt.bash`](bash/prompt.bash)
  - You will need to update the conky config files (at minimum, the wifi interface, but probably also
    width, x/y offsets)
+ - You will also need to add `start_conky.sh` as a startup application (replace Conky)
