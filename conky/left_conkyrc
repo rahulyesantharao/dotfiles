@@ -44,7 +44,8 @@ conky.config = {
 conky.text = [[
 ## SYSTEM
 ${color1}${font Roboto Mono:style=Bold}SYSTEM$color $hr
-${font Lato:style=Bold}${color2}$sysname $kernel $alignr $machine
+${voffset 5}${font Lato:style=Bold}${color2}$sysname $kernel $alignr $machine
+${voffset -8}$hr
 ${font}${color2}Uptime: ${color white}$alignr$uptime
 ${color2}Processes: ${color white}$alignr${execi 1000 ps aux | wc -l}
 ${color2}Battery: ${color white}$alignr${battery_percent BAT0}%
@@ -64,8 +65,8 @@ ${fs_bar /}
 
 ## NETWORK
 ${color1}${font Roboto Mono:style=Bold}NETWORK$color $hr
-${font Lato:style=Bold}${color2}External IP: $alignr${color white}${execi 1000  wget -q -O- http://ipecho.net/plain; echo}
-
+${voffset 5}${font Lato:style=Bold}${color2}External IP: $alignr${color white}${execi 10000  wget -q -O- http://ipecho.net/plain; echo}
+${color2}${voffset -8}$hr
 ${font}${color2}wlp59s0 $alignr${color white}${addrs wlp59s0}
 ${font}${color2}Strength:${color white}${wireless_link_qual_perc wlp59s0}%$alignr${color2}MAC: ${color white}${wireless_ap wlp59s0}
 ${color2}Down: ${color white}${downspeed wlp59s0}  ${alignr}${color2}Up: ${color white}${upspeed wlp59s0} 
@@ -73,7 +74,8 @@ ${color white}${downspeedgraph wlp59s0 50,195 00ffff 19a094} ${alignr}${upspeedg
 
 ## PROCESSES
 ${color1}${font Roboto Mono:style=Bold}PROCESSES$color $hr
-${font Lato:style=Bold}${color2}Running:$running_processes /$processes
+${voffset 5}${font Lato:style=Bold}${color2}Running:$running_processes /$processes
+${voffset -8}$hr
 ${font}${color2}Name $alignr    PID      CPU%  MEM%${color white}
 ${top name 1} $alignr ${top pid 1} ${top cpu 1}% ${top mem 1}%
 ${top name 2} $alignr ${top pid 2} ${top cpu 2}% ${top mem 2}%
