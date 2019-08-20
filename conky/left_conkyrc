@@ -1,0 +1,84 @@
+conky.config = {
+    alignment = 'middle_left',
+    background = false,
+    border_width = 1,
+    border_inner_margin = 15,
+    border_outer_margin = 0,
+    color1 = '19A094',
+    color2 = 'FF5252',
+    cpu_avg_samples = 2,
+    default_color = 'grey',
+    default_outline_color = 'grey',
+    default_shade_color = 'grey',
+    double_buffer = true,    
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'Lato:size=12',
+    gap_x = 60,
+    gap_y = 0,
+    minimum_height = 5,
+    maximum_width = 500,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 100,
+    stippled_borders = 0,
+    update_interval = 1,
+    uppercase = none,
+    use_spacer = 'left',
+    show_graph_scale = false,
+    show_graph_range = false
+}
+
+conky.text = [[
+## SYSTEM
+${color1}${font Roboto Mono:style=Bold}SYSTEM$color $hr
+${font Lato:style=Bold}${color2}$sysname $kernel $alignr $machine
+${font}${color2}Uptime: ${color white}$alignr$uptime
+${color2}Processes: ${color white}$alignr${execi 1000 ps aux | wc -l}
+${color2}Battery: ${color white}$alignr${battery_percent BAT0}%
+${color2}Temp: ${color white}$alignr${acpitemp}°C 
+
+## MEMORY
+${color1}${font Roboto Mono:style=Bold}MEMORY$color $hr
+${font}${color2}RAM $alignc ${color white}$mem / $memmax $alignr $memperc%
+$membar
+${color2}SWAP $alignc ${color white} ${swap} / ${swapmax} $alignr ${swapperc}%
+${swapbar}
+ 
+## DISK USAGE
+${color1}${font Roboto Mono:style=Bold}DISK USAGE$color $hr
+${font}${color2}/ ${color white}$alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
+${fs_bar /}
+
+## NETWORK
+${color1}${font Roboto Mono:style=Bold}NETWORK$color $hr
+${font Lato:style=Bold}${color2}External IP: $alignr${color white}${execi 1000  wget -q -O- http://ipecho.net/plain; echo}
+
+${font}${color2}wlp59s0 $alignr${color white}${addrs wlp59s0}
+${font}${color2}Strength:${color white}${wireless_link_qual_perc wlp59s0}%$alignr${color2}MAC: ${color white}${wireless_ap wlp59s0}
+${color2}Down: ${color white}${downspeed wlp59s0}  ${alignr}${color2}Up: ${color white}${upspeed wlp59s0} 
+${color white}${downspeedgraph wlp59s0 50,195 00ffff 19a094} ${alignr}${upspeedgraph wlp59s0 50,195 00ffff 19a094}
+
+## PROCESSES
+${color1}${font Roboto Mono:style=Bold}PROCESSES$color $hr
+${font Lato:style=Bold}${color2}Running:$running_processes /$processes
+${font}${color2}Name $alignr    PID      CPU%  MEM%${color white}
+${top name 1} $alignr ${top pid 1} ${top cpu 1}% ${top mem 1}%
+${top name 2} $alignr ${top pid 2} ${top cpu 2}% ${top mem 2}%
+${top name 3} $alignr ${top pid 3} ${top cpu 3}% ${top mem 3}%
+${top name 4} $alignr ${top pid 4} ${top cpu 4}% ${top mem 4}%
+${top name 5} $alignr ${top pid 5} ${top cpu 5}% ${top mem 5}%
+${top name 6} $alignr ${top pid 6} ${top cpu 6}% ${top mem 6}%
+]]
