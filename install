@@ -28,3 +28,6 @@ link "bash"
 
 # ssh
 link "ssh/config"
+
+# conky
+link "conky"

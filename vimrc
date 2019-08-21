@@ -174,6 +174,9 @@ set splitright
 nnoremap <CR> :w<CR>
 nnoremap <space> :
 nnoremap Q @q
+"make < > shifts keep selection
+vnoremap < <gv
+vnoremap > >gv
 
 set hidden " allow buffers to be hidden without saving
 

@@ -1,0 +1,65 @@
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    border_inner_margin = 15,
+    border_outer_margin = 0,
+    color1 = '0AEEFF',
+    color2 = 'FF1528',
+    cpu_avg_samples = 2,
+    default_color = 'grey',
+    default_outline_color = 'grey',
+    default_shade_color = 'grey',
+    double_buffer = true,    
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'Lato:size=12',
+    gap_x = 60,
+    gap_y = 90,
+    minimum_height = 5,
+    maximum_width = 500,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_transparent = false,
+    own_window_argb_visual = true,
+    own_window_argb_value = 150,
+    stippled_borders = 0,
+    update_interval = 1,
+    uppercase = none,
+    use_spacer = 'left',
+    show_graph_scale = false,
+    show_graph_range = false
+}
+
+conky.text = [[
+## CPU
+${color1}${font Roboto Mono:style=Bold}CPU$color $hr
+${voffset 5}${font Lato:style=Bold}${color2}${execi 10000 grep model /proc/cpuinfo | cut -d : -f2 | tail -1 | sed 's/\s//'}
+${voffset -8}$hr$font
+${color2}CPU1: ${color white}${cpu cpu1}%  ${cpubar cpu1}
+${cpugraph cpu1 50,450 00ffff 19a094 -t -l}
+${color2}CPU2: ${color white}${cpu cpu2}%  ${cpubar cpu2}
+${cpugraph cpu2 50,450 00ffff 19a094 -t -l}
+${color2}CPU3: ${color white}${cpu cpu3}%  ${cpubar cpu3}
+${cpugraph cpu3 50,450 00ffff 19a094 -t -l}
+${color2}CPU4: ${color white}${cpu cpu4}%  ${cpubar cpu4}
+${cpugraph cpu4 50,450 00ffff 19a094 -t -l}
+${color2}CPU5: ${color white}${cpu cpu5}%  ${cpubar cpu5}
+${cpugraph cpu5 50,450 00ffff 19a094 -t -l}
+${color2}CPU6: ${color white}${cpu cpu6}%  ${cpubar cpu6}
+${cpugraph cpu6 50,450 00ffff 19a094 -t -l}
+${color2}CPU7: ${color white}${cpu cpu7}%  ${cpubar cpu7}
+${cpugraph cpu7 50,450 00ffff 19a094 -t -l}
+${color2}CPU8: ${color white}${cpu cpu8}%  ${cpubar cpu8}
+${cpugraph cpu8 50,450 00ffff 19a094 -t -l}
+]]
