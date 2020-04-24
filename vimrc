@@ -178,6 +178,9 @@ nnoremap Q @q
 vnoremap < <gv
 vnoremap > >gv
 
+" paste
+set pastetoggle=<F2>
+
 set hidden " allow buffers to be hidden without saving
 
 " save folds on close
