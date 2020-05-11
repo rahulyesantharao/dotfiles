@@ -154,9 +154,15 @@ fun! CleanExtraSpaces()
   call setreg('/', old_query)
 endfun
 
+function ClangFormatFile()
+  let l:lines="all"
+  py3f ~/.vim/clang-format.py
+endfunction
+
 if has("autocmd")
   autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.cpp :call CleanExtraSpaces()
   autocmd BufWritePre *.py silent :Black
+  autocmd BufWritePre *.c,*.h,*.cpp,*.hpp :call ClangFormatFile()
 endif
 
 " save read-only files
