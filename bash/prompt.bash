@@ -5,25 +5,25 @@
 declare -A PL_COLORS=(
 [Color_Off]='\[\e[0m\]'       # Text Reset
 # Foreground
-[Default]='\[\e[0;39m\]'                # Default
-[Black]='\033[38;2;40;44;52m'           # Black
-[Red]='\033[38;2;224;108;117m'          # Red
-[Green]='\033[38;2;152;195;121m'        # Green
-[Yellow]='\033[38;2;229;192;123m'       # Yellow
-[Blue]='\033[38;2;97;195;239m'          # Blue
-[Purple]='\033[38;2;198;120;221m'       # Purple
-[Cyan]='\033[38;2;86;182;194m'          # Cyan
-[White]='\033[38;2;171;178;191m'        # White
+[Default]='\[\e[0;39m\]'               # Default
+[Black]='\[\e[38;2;40;44;52m\]'        # Black
+[Red]='\[\e[38;2;224;108;117m\]'       # Red
+[Green]='\[\e[38;2;152;195;121m\]'     # Green
+[Yellow]='\[\e[38;2;229;192;123m\]'    # Yellow
+[Blue]='\[\e[38;2;97;195;239m\]'       # Blue
+[Purple]='\[\e[38;2;198;120;221m\]'    # Purple
+[Cyan]='\[\e[38;2;86;182;194m\]'       # Cyan
+[White]='\[\e[38;2;171;178;191m\]'     # White
 # Background
-[On_Default]='\[\e[49m\]'               # Default
-[On_Black]='\033[48;2;40;44;52m'        # Black
-[On_Red]='\033[48;2;224;108;117m'       # Red
-[On_Green]='\033[48;2;152;195;121m'     # Green
-[On_Yellow]='\033[48;2;229;192;123m'    # Yellow
-[On_Blue]='\033[48;2;97;195;239m'       # Blue
-[On_Purple]='\033[48;2;198;120;221m'    # Purple
-[On_Cyan]='\033[48;2;86;182;194m'       # Cyan
-[On_White]='\033[48;2;171;178;191m'     # White
+[On_Default]='\[\e[49m\]'              # Default
+[On_Black]='\[\e[48;2;40;44;52m\]'     # Black
+[On_Red]='\[\e[48;2;224;108;117m\]'    # Red
+[On_Green]='\[\e[48;2;152;195;121m\]'  # Green
+[On_Yellow]='\[\e[48;2;229;192;123m\]' # Yellow
+[On_Blue]='\[\e[48;2;97;195;239m\]'    # Blue
+[On_Purple]='\[\e[48;2;198;120;221m\]' # Purple
+[On_Cyan]='\[\e[48;2;86;182;194m\]'    # Cyan
+[On_White]='\[\e[48;2;171;178;191m\]'  # White
 )
 
 # Character Set
@@ -85,7 +85,7 @@ PL_GIT_CONFLICTS=false
 PL_GIT_MODIFIED=false
 PL_GIT_UNTRACKED=false
 
-PL_ERASE_TO_EOL=true
+[[ $(bind -v) =~ "set show-mode-in-prompt off" ]] && PL_ERASE_TO_EOL=true
 ######################################################
 # UTILITIES ##########################################
 
