@@ -31,7 +31,7 @@ declare -A PL_SYMBOLS=(
 [hard_separator]=""
 [soft_separator]="│"
 
-[git_branch]="╬"
+[git_branch]="" #"╬"
 [git_untracked]="?"
 [git_stash]="§"
 [git_ahead]="↑"

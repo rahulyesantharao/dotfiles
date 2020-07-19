@@ -27,7 +27,10 @@ link "shell"
 link "bash"
 
 # ssh
-link "ssh/config"
+#link "ssh/config"
 
 # conky
-link "conky"
+#link "conky"
+
+# clang-format
+link "clang-format"

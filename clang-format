@@ -1,0 +1,8 @@
+﻿---
+BasedOnStyle: Google
+ColumnLimit: '100'
+SortIncludes: 'false'
+TabWidth: '2'
+UseTab: Never
+
+...
