@@ -31,6 +31,13 @@ set history=100
 " intuitive line movement
 nnoremap j gj
 nnoremap k gk
+" tab navigation
+nnoremap H gT
+nnoremap L gt
+nnoremap <C-t>     :tabnew<CR>
+"inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+"inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
 " Turn on line numbers
 set number 
 " toggle relative numbering
@@ -154,9 +161,21 @@ fun! CleanExtraSpaces()
   call setreg('/', old_query)
 endfun
 
+if has('python')
+  map <C-F> :pyf ~/.vim/clang-format.py<cr>
+  imap <C-F> <c-o>:pyf ~/.vim/clang-format.py<cr>
+elseif has('python3')
+  map <C-F> :py3f ~/.vim/clang-format.py<cr>
+  imap <C-F> <c-o>:py3f ~/.vim/clang-format.py<cr>
+endif
+
 function ClangFormatFile()
   let l:lines="all"
-  py3f ~/.vim/clang-format.py
+  if has('python')
+    pyf ~/.vim/clang-format.py
+  elseif has('python3')
+    py3f ~/.vim/clang-format.py
+  endif
 endfunction
 
 if has("autocmd")
