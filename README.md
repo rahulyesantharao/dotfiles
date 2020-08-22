@@ -13,3 +13,4 @@ If you clone without submodules, run `cd dotfiles && git submodule update --init
  - You will need to update the conky config files (at minimum, the wifi interface, but probably also
    width, x/y offsets)
  - You will also need to add `start_conky.sh` as a startup application (replace Conky)
+ - If you don't have `python3-venv` installed (so `Black` setup fails), then just remove `vim/black/` and do it again.
